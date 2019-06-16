@@ -4,24 +4,36 @@ import java.util.Random;
 
 public class Coin {
 	
-	public static int getHeads(int times) {
+	public static int calcHeads(int times) {
 		
-		int head = 0;		
-		if (times > 0) {
-			
-			Random random = new Random();
-			for (int i = 0; i < times; i++) {
-				int temp = random.nextInt(2);
+		Random random = new Random();
+		int head = 0;
+		boolean cast = false;
 				
-				if (temp == 1) {
-					head += 1;
-				}
-			}
+		if (times <= 0) {
+			head = 0;
+			return head;
 		}
+				
+		for (int i = 0; i < times; i++) {
+			cast = random.nextBoolean();
+			if (cast) {
+				head += 1;
+			}
+		}				
 		return head;
 	}
 	
-	public static int getTails(int head) {
-		return 1000 - head;
+	public static int calcTails(int times, int head) {
+		int tail = 0;
+		
+		if (times <= 0) {
+			tail = 0;
+			return tail;
+		}
+		
+		tail = times - head;
+		
+		return tail;
 	}
 }

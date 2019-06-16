@@ -7,31 +7,65 @@ import org.junit.Test;
 public class NaturalNumberTest {
 
 	@Test
-	public void testIsNatural() {
+	public void testFirIsNatural() {
 		
-		int number = 34;
+		int number = 0;
 		boolean actual = NaturalNumber.isNatural(number);
 		boolean expected = false;
 		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testSecIsNatural() {
 		
-		number = 11;
-		actual = NaturalNumber.isNatural(number);
-		expected = true;
+		int number = -5;
+		boolean actual = NaturalNumber.isNatural(number);
+		boolean expected = false;
 		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testThirdIsNatural() {
 		
-		number = 43;
-		actual = NaturalNumber.isNatural(number);
-		expected = true;
+		int number = 1;
+		boolean actual = NaturalNumber.isNatural(number);
+		boolean expected = true;
 		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testFourIsNatural() {
 		
-		number = 63;
-		actual = NaturalNumber.isNatural(number);
-		expected = false;
+		int number = 11;
+		boolean actual = NaturalNumber.isNatural(number);
+		boolean expected = true;
 		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testFiveIsNatural() {
 		
-		number = 111;
-		actual = NaturalNumber.isNatural(number);
-		expected = false;
+		int number = 12;
+		boolean actual = NaturalNumber.isNatural(number);
+		boolean expected = false;
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testSixIsNatural() {
+		
+		int number = 29;
+		boolean actual = NaturalNumber.isNatural(number);
+		boolean expected = true;
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testSevenIsNatural() {
+		
+		int number = 30;
+		boolean actual = NaturalNumber.isNatural(number);
+		boolean expected = false;
 		assertEquals(expected, actual);
 	}
 }

@@ -1,17 +1,21 @@
 package by.epam.javatraining.niakhai.task1.controller;
 
 import by.epam.javatraining.niakhai.task1.model.logic.Coin;
-import by.epam.javatraining.niakhai.task1.view.Printer;
+import by.epam.javatraining.niakhai.view.Printer;
 
 public class Task1 {
 
 	public static void main(String[] args) {
 		
-		int times = 1000;
-		int head = Coin.getHeads(times);
-		int tail = Coin.getTails(head);
+		int times = 50;
 		
-		Printer.println("heads: %d times.", head);
-		Printer.println("tails: %d times.", tail);
+		int head = Coin.calcHeads(times);
+		int tail = Coin.calcTails(times, head);
+		
+		String message1 = "Heads: " + head + ".\n";
+		String message2 = "Tails: " + tail + ".\n";
+		
+		Printer.println(message1);
+		Printer.println(message2);
 	}
 }

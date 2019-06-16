@@ -4,20 +4,26 @@ public class NaturalNumber {
 	
 	public static boolean isNatural (int number) {
 		
-		if (NumberChecker.checkNumber(number)) {
-			
-			int counter = 2;
-			
-			while (counter < number) {
-				
-				if (number % counter == 0) {
-					return false;
-				}
-				
-				counter++;			
-			}
+		boolean result = false;
+		
+		if (number <= 0) {
+			return result;
+		} else if (number == 1) {
+			result = true;
+			return result;
 		}
 		
-		return true;
+		int counter = 2;
+		int counterLimit = number / 2;
+		
+		while (counter < counterLimit) {
+			
+			if (number % counter == 0) {
+				return result;
+			}
+			counter++;			
+		}
+		result = true;
+		return result;
 	}
 }

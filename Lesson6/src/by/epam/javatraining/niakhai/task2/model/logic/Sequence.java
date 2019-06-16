@@ -2,20 +2,16 @@ package by.epam.javatraining.niakhai.task2.model.logic;
 
 public class Sequence {
 	
-	public static String getSequenceInfo(int number) {
+	public static boolean isIncreaseSequence(int number) {
+		boolean flag = false;
 		
-		String result = "Is not sequence.";
-		
-		if (Sequence.isIncreaseSequence(number)) {
-			result = "Is increase sequence.";
-		} else if (Sequence.isDecreaseSequence(number)) {
-			result = "Is decrease sequence.";
+		if(number < 10 && number >-10) {
+			return flag;
 		}
 		
-		return result;
-	}
-	
-	public static boolean isIncreaseSequence(int number) {
+		if(number <= -10) {
+			number *= -1;
+		}
 				
 		while (number > 10) {
 			
@@ -27,11 +23,19 @@ public class Sequence {
 				return false;
 			}
 		}
-		
 		return true;
 	}
 	
 	public static boolean isDecreaseSequence(int number) {
+		boolean flag = false;
+		
+		if(number < 10 && number >-10) {
+			return flag;
+		}
+		
+		if(number <= -10) {
+			number *= -1;
+		}
 		
 		while (number > 10) {
 			
@@ -43,7 +47,6 @@ public class Sequence {
 				return false;
 			}
 		}
-		
 		return true;
 	}
 }

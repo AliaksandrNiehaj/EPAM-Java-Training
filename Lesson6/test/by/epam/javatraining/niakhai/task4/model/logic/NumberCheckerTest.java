@@ -7,49 +7,74 @@ import org.junit.Test;
 public class NumberCheckerTest {
 
 	@Test
-	public void testGetInfo() {
-		int number = 143454345;
-		String actual = NumberChecker.getInfo(number);
-		String expected = "All numbers are different.";
-		assertEquals(expected, actual);
+	public void testFirIsEven() {
 		
-		number = 2224468;
-		actual = NumberChecker.getInfo(number);
-		expected = "All numbers are even.";
-		assertEquals(expected, actual);
-		
-		number = 13579;
-		actual = NumberChecker.getInfo(number);
-		expected = "All numbers are odd.";
+		int number = 0;
+		boolean actual = NumberChecker.isEven(number);
+		boolean expected = true;
 		assertEquals(expected, actual);
 	}
-
+	
 	@Test
-	public void testIsEven() {
+	public void testSecIsEven() {
+		
+		int number = 13579;
+		boolean actual = NumberChecker.isEven(number);
+		boolean expected = false;
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testThirdIsEven() {
 		
 		int number = 2224468;
 		boolean actual = NumberChecker.isEven(number);
 		boolean expected = true;
 		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testFourIsEven() {
 		
-		number = 13579;
-		actual = NumberChecker.isEven(number);
-		expected = false;
+		int number = 297;
+		boolean actual = NumberChecker.isEven(number);
+		boolean expected = false;
 		assertEquals(expected, actual);
-		
 	}
 
 	@Test
-	public void testIsOdd() {
+	public void testFirIsOdd() {
+		
+		int number = 0;
+		boolean actual = NumberChecker.isOdd(number);
+		boolean expected = false;
+		assertEquals(expected, actual);
+	}
+
+	@Test
+	public void testSecIsOdd() {
 		
 		int number = 2468;
 		boolean actual = NumberChecker.isOdd(number);
 		boolean expected = false;
 		assertEquals(expected, actual);
+	}
+
+	@Test
+	public void testThirdIsOdd() {
 		
-		number = 73979;
-		actual = NumberChecker.isOdd(number);
-		expected = true;
+		int number = 73979;
+		boolean actual = NumberChecker.isOdd(number);
+		boolean expected = true;
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testFourIsOdd() {
+		
+		int number = 729;
+		boolean actual = NumberChecker.isOdd(number);
+		boolean expected = false;
 		assertEquals(expected, actual);
 	}
 }
