@@ -1,0 +1,7 @@
+Boeing 737 passanger 2006 2 189 0 970 2500
+boeing 747 passanger 2012 2 528 0 987 10300
+saab 340 passanger 2016 2 37 0 522 895
+airbus A380 passanger 2008 2 853 0 1020 12500
+Airbus A320 passanger 2010 2 179 0 925 2700
+airbus A400m cargo 2019 4 0 37000 825 8000
+Airbus Beluga cargo 2017 5 0 47000 778 9000
